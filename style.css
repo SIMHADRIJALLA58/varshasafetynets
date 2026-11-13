@@ -2386,3 +2386,1116 @@ header{
 h1, h2, h3 {
     color: #ffffff !important;
 } */
+
+
+
+
+
+/* ABOUT SECTION */
+.varsha-about {
+    width: 100%;
+    padding: 90px 7%;
+    background: #ffffff;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* LEFT CONTENT */
+
+.about-content {
+    animation: contentReveal 1s ease forwards;
+}
+
+.about-tag {
+    display: inline-block;
+    color: #159b78;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.about-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #172b40;
+    margin-bottom: 15px;
+}
+
+.about-content h2 span {
+    color: #159b78;
+}
+
+.about-line {
+    width: 85px;
+    height: 4px;
+    background: #e84b4b;
+    border-radius: 20px;
+    margin: 20px 0 25px;
+}
+
+.about-content p {
+    color: #626d78;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+    text-align: justify;
+}
+
+/* FEATURES */
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.about-features span {
+    color: #263b4d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* BUTTONS */
+
+.about-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.about-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.4s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+.about-call {
+    background: #e53935;
+    box-shadow: 0 7px 20px rgba(229,57,53,0.22);
+}
+
+.about-whatsapp {
+    background: #16a66a;
+    box-shadow: 0 7px 20px rgba(22,166,106,0.22);
+}
+
+.about-buttons a:hover {
+    transform: translateY(-6px) scale(1.06);
+}
+
+.call-icon {
+    display: inline-block;
+    animation: ringPhone 1.5s infinite;
+}
+
+/* RIGHT IMAGE */
+
+.about-image-area {
+    position: relative;
+    padding: 20px;
+    animation: imageReveal 1.2s ease forwards;
+}
+
+.about-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    border-radius: 180px 180px 25px 25px;
+    box-shadow: 0 20px 55px rgba(0,0,0,0.13);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+}
+
+/* DECORATIVE FRAME */
+
+.image-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 95%;
+    border: 3px solid #159b78;
+    border-radius: 180px 180px 25px 25px;
+    transform: rotate(5deg);
+    animation: frameFloat 4s ease-in-out infinite;
+}
+
+/* IMAGE BADGE */
+
+.image-badge {
+    position: absolute;
+    z-index: 3;
+    bottom: 55px;
+    left: -20px;
+    background: white;
+    padding: 18px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.image-badge strong {
+    color: #159b78;
+    font-size: 27px;
+}
+
+.image-badge span {
+    color: #526171;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* FLOATING DOTS */
+
+.floating-dot {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.dot-one {
+    width: 22px;
+    height: 22px;
+    background: #e84b4b;
+    top: 70px;
+    right: -5px;
+    animation: dotFloat 3s infinite;
+}
+
+.dot-two {
+    width: 14px;
+    height: 14px;
+    background: #159b78;
+    bottom: 20px;
+    right: 30px;
+    animation: dotFloat 4s infinite reverse;
+}
+
+/* ANIMATIONS */
+
+@keyframes contentReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes frameFloat {
+    0%, 100% {
+        transform: rotate(5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(3deg) translateY(-10px);
+    }
+}
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes dotFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.2);
+    }
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+@keyframes ringPhone {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    10%, 30%, 50% {
+        transform: rotate(-15deg);
+    }
+    20%, 40% {
+        transform: rotate(15deg);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image-area {
+        max-width: 550px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-image {
+        height: 420px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .varsha-about {
+        padding: 60px 5%;
+    }
+
+    .about-content h2 {
+        font-size: 43px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .about-image {
+        height: 340px;
+    }
+
+    .about-buttons {
+        gap: 12px;
+    }
+
+    .about-buttons a {
+        padding: 13px 20px;
+        font-size: 13px;
+    }
+
+    .image-badge {
+        left: -5px;
+        bottom: 35px;
+    }
+}
+
+
+
+
+/* =================================
+   TRANSPARENT HEADER / NAVBAR
+================================= */
+
+header.header,
+#header,
+.header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+
+    background: rgba(255, 255, 255, 0.15) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+
+    box-shadow: none !important;
+    border: none !important;
+
+    z-index: 99999 !important;
+}
+
+/* Remove background from header container */
+.header .container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Navbar links and logo text */
+.header a,
+.header .logo-text,
+.header .logo-text h2,
+.header .logo-text span {
+    color: #111 !important;
+}
+
+
+/* STICKY TRANSPARENT NAVBAR */
+
+header.header,
+#header,
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+
+    box-shadow: none !important;
+    transition: background 0.3s ease;
+}
+
+
+
+
+
+
+/* ==========================================
+   VARSHA SAFETY NETS - LUXURY ABOUT DESIGN
+   Editorial / Architectural Style
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --varsha-ink: #171412;
+    --varsha-copper: #a65e43;
+    --varsha-burgundy: #642f32;
+    --varsha-cream: #f5efe6;
+    --varsha-beige: #e9ddce;
+}
+
+/* MAIN BACKGROUND */
+
+.varsha-about-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 120px 6%;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 5% 12%, rgba(166,94,67,.10), transparent 23%),
+        radial-gradient(circle at 95% 90%, rgba(100,47,50,.09), transparent 25%),
+        linear-gradient(135deg, #faf7f1 0%, #f2eae0 52%, #faf7f2 100%);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* BACKGROUND DESIGN - LARGE CIRCLES */
+
+.varsha-about-section::before {
+    content: "";
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    top: -230px;
+    left: -150px;
+    border: 1px solid rgba(166,94,67,.24);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(166,94,67,.035),
+        0 0 0 75px rgba(166,94,67,.025);
+    z-index: -1;
+}
+
+.varsha-about-section::after {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    bottom: -210px;
+    right: -100px;
+    border: 1px solid rgba(100,47,50,.20);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 30px rgba(100,47,50,.035),
+        0 0 0 65px rgba(100,47,50,.025);
+    z-index: -1;
+}
+
+/* MAIN GRID */
+
+.varsha-about-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1450px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* LEFT CONTENT */
+
+.varsha-about-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px 0;
+}
+
+/* SMALL TOP LABEL */
+
+.varsha-about-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 28px;
+    color: var(--varsha-burgundy);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.varsha-tag-line {
+    display: inline-block;
+    width: 48px;
+    height: 2px;
+    background: var(--varsha-copper);
+}
+
+/* LARGE EDITORIAL HEADING */
+
+.varsha-about-content h2 {
+    max-width: 680px;
+    margin: 0 0 32px;
+    color: var(--varsha-ink);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 5.2vw, 76px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -2.8px;
+}
+
+.varsha-about-content h2 span {
+    display: block;
+    color: var(--varsha-copper);
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* DECORATIVE HEADING LINE */
+
+.varsha-about-content h2::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 4px;
+    margin-top: 28px;
+    background: var(--varsha-burgundy);
+    border-radius: 10px;
+}
+
+/* PARAGRAPHS - BLACK TEXT */
+
+.varsha-about-intro {
+    color: #171412;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.95;
+    margin: 0 0 20px;
+}
+
+.varsha-about-intro strong {
+    color: var(--varsha-burgundy);
+    font-weight: 800;
+}
+
+.varsha-about-description {
+    color: #171412;
+    font-size: 14.5px;
+    font-weight: 400;
+    line-height: 2;
+    margin: 0 0 17px;
+}
+
+/* FEATURE AREA */
+
+.varsha-about-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 32px 0;
+    padding: 22px 0;
+    border-top: 1px solid rgba(100,47,50,.17);
+    border-bottom: 1px solid rgba(100,47,50,.17);
+}
+
+.varsha-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.varsha-feature-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--varsha-burgundy);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 17px;
+    box-shadow: 0 7px 18px rgba(100,47,50,.16);
+}
+
+.varsha-feature-item h4 {
+    margin: 0 0 5px;
+    color: #171412;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.varsha-feature-item p {
+    margin: 0;
+    color: #171412;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* PREMIUM BUTTON */
+
+.varsha-about-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 17px 28px;
+    overflow: hidden;
+    background: var(--varsha-burgundy);
+    color: #fff !important;
+    border: 1px solid var(--varsha-burgundy);
+    border-radius: 3px;
+    text-decoration: none !important;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: all .35s ease;
+}
+
+.varsha-about-btn:hover {
+    background: var(--varsha-copper);
+    border-color: var(--varsha-copper);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(100,47,50,.2);
+}
+
+.varsha-about-btn i {
+    transition: transform .3s ease;
+}
+
+.varsha-about-btn:hover i {
+    transform: translateX(6px);
+}
+
+/* RIGHT IMAGE AREA */
+
+.varsha-about-visual {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE BACKGROUND FRAME */
+
+.varsha-image-backdrop {
+    position: absolute;
+    width: 88%;
+    height: 88%;
+    top: 5%;
+    right: 1%;
+    background: #d8c2ad;
+    border-radius: 4px;
+    transform: rotate(5deg);
+}
+
+/* MAIN IMAGE */
+
+.varsha-main-image {
+    position: relative;
+    z-index: 1;
+    width: 92%;
+    height: 530px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 9px solid #fff;
+    box-shadow: 0 30px 65px rgba(38,25,19,.20);
+}
+
+.varsha-main-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.varsha-main-image:hover img {
+    transform: scale(1.055);
+}
+
+/* EXPERIENCE CARD */
+
+.varsha-experience-card {
+    position: absolute;
+    z-index: 4;
+    left: -10px;
+    top: 19%;
+    min-width: 175px;
+    padding: 23px 25px;
+    background: #fff;
+    border-left: 4px solid var(--varsha-copper);
+    box-shadow: 0 15px 40px rgba(30,20,15,.13);
+}
+
+.varsha-card-number {
+    display: block;
+    color: var(--varsha-burgundy);
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.varsha-card-text {
+    display: block;
+    margin-top: 9px;
+    color: #171412;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* FLOATING IMAGE CAPTION */
+
+.varsha-installation-card {
+    position: absolute;
+    z-index: 4;
+    right: -12px;
+    bottom: 9%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgba(30,20,15,.13);
+}
+
+.varsha-install-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--varsha-copper);
+    border-radius: 50%;
+}
+
+.varsha-installation-card h4 {
+    margin: 0 0 6px;
+    color: #171412;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.varsha-installation-card p {
+    margin: 0;
+    color: #171412;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* DECORATIVE CORNER */
+
+.varsha-image-decoration {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 105px;
+    height: 105px;
+    border-top: 2px solid var(--varsha-copper);
+    border-right: 2px solid var(--varsha-copper);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+    .varsha-about-section {
+        padding: 85px 5%;
+    }
+
+    .varsha-about-container {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 35px;
+    }
+
+    .varsha-about-content h2 {
+        font-size: 48px;
+    }
+
+    .varsha-about-visual {
+        min-height: 490px;
+    }
+
+    .varsha-main-image {
+        height: 420px;
+    }
+
+    .varsha-installation-card {
+        width: 245px;
+        right: -5px;
+    }
+
+    .varsha-about-features {
+        gap: 18px;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .varsha-about-section {
+        padding: 70px 22px 85px;
+    }
+
+    .varsha-about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .varsha-about-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 22px;
+    }
+
+    .varsha-about-content h2 {
+        font-size: clamp(42px, 11vw, 56px);
+        line-height: 1.13;
+        letter-spacing: -1.8px;
+        margin-bottom: 26px;
+    }
+
+    .varsha-about-content h2::after {
+        width: 65px;
+        margin-top: 22px;
+    }
+
+    .varsha-about-intro {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .varsha-about-description {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .varsha-about-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 19px;
+        padding: 22px 0;
+    }
+
+    .varsha-about-visual {
+        min-height: 410px;
+        margin: 0 8px;
+    }
+
+    .varsha-main-image {
+        width: 94%;
+        height: 355px;
+        border-width: 6px;
+    }
+
+    .varsha-image-backdrop {
+        width: 90%;
+        height: 88%;
+        top: 5%;
+        right: 0;
+    }
+
+    .varsha-experience-card {
+        left: -10px;
+        top: 15%;
+        min-width: 135px;
+        padding: 17px;
+    }
+
+    .varsha-card-number {
+        font-size: 36px;
+    }
+
+    .varsha-card-text {
+        font-size: 9px;
+    }
+
+    .varsha-installation-card {
+        right: -5px;
+        bottom: 3%;
+        width: 235px;
+        padding: 16px;
+        gap: 11px;
+    }
+
+    .varsha-installation-card h4 {
+        font-size: 14px;
+    }
+
+    .varsha-installation-card p {
+        font-size: 10px;
+    }
+
+    .varsha-install-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .varsha-image-decoration {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .varsha-about-section {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .varsha-about-content h2 {
+        font-size: 39px;
+    }
+
+    .varsha-about-visual {
+        min-height: 360px;
+    }
+
+    .varsha-main-image {
+        height: 310px;
+    }
+
+    .varsha-installation-card {
+        width: 215px;
+    }
+}
+
+
+
+
+/* =================================
+   VARSHA CONTACT BUTTONS
+================================= */
+
+.varsha-contact-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.varsha-contact-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 180px;
+    padding: 13px 25px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: #fff !important;
+    transition: all .35s ease;
+    overflow: visible;
+}
+
+/* CALL BUTTON */
+
+.varsha-call-btn {
+    background: #642f32;
+    box-shadow: 0 8px 22px rgba(100,47,50,.20);
+}
+
+.varsha-call-btn:hover {
+    background: #171412;
+    transform: translateY(-4px);
+}
+
+/* WHATSAPP BUTTON */
+
+.varsha-whatsapp-btn {
+    background: #168b53;
+    box-shadow: 0 8px 22px rgba(22,139,83,.20);
+}
+
+.varsha-whatsapp-btn:hover {
+    background: #106b40;
+    transform: translateY(-4px);
+}
+
+/* ICON CIRCLES */
+
+.varsha-btn-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(255,255,255,.18);
+    border-radius: 50%;
+    font-size: 17px;
+    animation: varshaIconPulse 1.5s infinite ease-in-out;
+}
+
+/* ICON BLINK + ZOOM ANIMATION */
+
+@keyframes varshaIconPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.22);
+        opacity: .65;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* BUTTON PULSE RING */
+
+.varsha-contact-btn::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    opacity: 0;
+    animation: varshaButtonRing 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes varshaButtonRing {
+    0% {
+        transform: scale(1);
+        opacity: .45;
+    }
+
+    100% {
+        transform: scale(1.09);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .varsha-about-intro {
+        font-size: 16px !important;
+    }
+
+    .varsha-about-description {
+        font-size: 15px !important;
+    }
+
+    .varsha-contact-buttons {
+        gap: 13px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .varsha-contact-btn {
+        width: 100%;
+        min-height: 55px;
+        justify-content: center;
+    }
+}
+
+/* REDUCE MOTION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .varsha-btn-icon,
+    .varsha-contact-btn::after {
+        animation: none;
+    }
+}
