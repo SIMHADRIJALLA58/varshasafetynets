@@ -1940,7 +1940,7 @@ header{
 
    @media (max-width: 768px) {
 
-    .hero-slide::before {
+    /* .hero-slide::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -1965,6 +1965,34 @@ header{
             );
     }
 
+} */
+
+
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.16) 50%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(5, 15, 22, 0.22) 0%,
+            rgba(5, 15, 22, 0.14) 60%,
+            rgba(5, 15, 22, 0.06) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5, 15, 22, 0.16),
+            transparent 65%
+        );
 }
 
     /* CONTENT POSITION */
