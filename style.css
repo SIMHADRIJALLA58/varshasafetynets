@@ -1938,7 +1938,7 @@ header{
         background-repeat: no-repeat;
     }
 
-   @media (max-width: 768px) {
+   /* @media (max-width: 768px) { */
 
     /* .hero-slide::before {
         content: "";
