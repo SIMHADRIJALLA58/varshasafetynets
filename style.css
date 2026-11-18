@@ -1631,7 +1631,7 @@ header{
 
 .hero-content h1 span {
     display: block;
-    color: #24aabc;
+    color: #f3c41d;
 }
 
 /* Subheading */
@@ -4941,7 +4941,7 @@ header.header,
     font-family: 'Playfair Display', serif;
     font-size: clamp(35px, 4vw, 51px);
     line-height: 1.2;
-    color: #251c1d;
+    color: #080808;
     font-weight: 800;
     letter-spacing: -1px;
     margin: 0;
@@ -4968,7 +4968,7 @@ header.header,
 /* NORMAL BLACK PARAGRAPHS */
 
 .materials-description {
-    color: #252525;
+    color: #000000;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.9;
@@ -5032,7 +5032,7 @@ header.header,
 }
 
 .material-item p {
-    color: #252525;
+    color: #000000;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.75;
@@ -5042,7 +5042,7 @@ header.header,
 /* QUALITY NOTE */
 
 .materials-note {
-    color: #252525;
+    color: #000000;
     font-size: 12px;
     font-weight: 700;
     margin: 24px 0;
@@ -7693,5 +7693,370 @@ header.header,
     .varsha-footer-floating a {
         width: 44px;
         height: 44px;
+    }
+}
+
+
+
+
+
+
+/* ==========================================
+   PREMIUM MOVING ANNOUNCEMENT BAR
+========================================== */
+
+.moving-bar {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: #0b6635;
+    color: #ffffff;
+    padding: 7px 0;
+    margin: 0;
+}
+
+/* Moving Text Container */
+.moving-text {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    white-space: nowrap;
+    will-change: transform;
+    animation: movingBarScroll 65s linear infinite;
+}
+
+/* Announcement Text */
+.moving-text span {
+    display: inline-block;
+    flex-shrink: 0;
+    padding-right: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* Smooth Right to Left Animation */
+@keyframes movingBarScroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Pause on Hover */
+.moving-bar:hover .moving-text {
+    animation-play-state: paused;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .moving-bar {
+        padding: 5px 0;
+    }
+
+    .moving-text {
+        animation-duration: 70s;
+    }
+
+    .moving-text span {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+
+    .moving-bar {
+        padding: 5px 0;
+    }
+
+    .moving-text span {
+        font-size: 11px;
+    }
+}
+
+
+
+/* ==========================================
+   TRANSPARENT MOVING ANNOUNCEMENT BAR
+========================================== */
+
+.moving-bar {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+    color: #000000;
+    padding: 12px 0;
+    margin: 0;
+}
+
+/* Moving Text Container */
+.moving-text {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    white-space: nowrap;
+    will-change: transform;
+    animation: movingBarScroll 80s linear infinite;
+}
+
+/* Announcement Text */
+.moving-text span {
+    display: inline-block;
+    flex-shrink: 0;
+    padding-right: 35px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+/* Smooth Right to Left Animation */
+@keyframes movingBarScroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Pause on Hover */
+.moving-bar:hover .moving-text {
+    animation-play-state: paused;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .moving-bar {
+        padding: 10px 0;
+    }
+
+    .moving-text {
+        animation-duration: 85s;
+    }
+
+    .moving-text span {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .moving-bar {
+        padding: 8px 0;
+    }
+
+    .moving-text span {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+/* ==========================================
+   PREMIUM MOVING TEXT BAR
+========================================== */
+
+.moving-bar {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent !important;
+    padding: 9px 0;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove Decorative Border Lines */
+.moving-bar::before,
+.moving-bar::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Moving Content */
+.moving-text {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    white-space: nowrap;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    animation: premiumTextMove 85s linear infinite;
+    will-change: transform;
+}
+
+/* Premium Text Styling */
+.moving-text span {
+    display: block;
+    flex-shrink: 0;
+    padding: 0 40px 0 0;
+    margin: 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    color: #111111 !important;
+    text-transform: uppercase;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* Seamless Right to Left Movement */
+@keyframes premiumTextMove {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Hide Scrollbar */
+.moving-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.moving-bar {
+    scrollbar-width: none;
+}
+
+/* ==========================================
+   TABLET AND MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .moving-bar {
+        padding: 7px 0;
+    }
+
+    .moving-text {
+        animation-duration: 90s;
+    }
+
+    .moving-text span {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding-right: 30px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+
+    .moving-bar {
+        padding: 6px 0;
+    }
+
+    .moving-text span {
+        font-size: 13px;
+        letter-spacing: 0.4px;
+    }
+}
+
+
+
+
+
+/* Laptop View - Transparent Background */
+@media screen and (min-width: 769px) {
+
+    .moving-bar,
+    .moving-text,
+    .moving-text span {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .moving-bar::before,
+    .moving-bar::after,
+    .moving-text::before,
+    .moving-text::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+
+
+/* Reduce Navbar Size - Laptop & Desktop */
+@media screen and (min-width: 1024px) {
+
+    .navbar {
+        min-height: 60px !important;
+        padding: 5px 0 !important;
+    }
+
+    .navbar-brand {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .navbar-brand img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 12px !important;
+        font-size: 15px;
+    }
+
+    /* Reduce Moving Text Bar Height */
+    .moving-bar {
+        padding: 3px 0 !important;
+        background: transparent !important;
+    }
+
+    .moving-text span {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
